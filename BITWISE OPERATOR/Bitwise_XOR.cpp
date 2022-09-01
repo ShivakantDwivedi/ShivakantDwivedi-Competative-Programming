@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int x;
+    cin>>x;
+    int y;
+    cin>>y;
+    int XOR=x^y;
+    cout<<XOR;
+}
