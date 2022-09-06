@@ -11,7 +11,7 @@ bool check(vector<int>brr)
     {
         if(brr[i]>brr[i+1])
         {
-            count++;
+            count++; //  count++ es liye kiya gya hai kyoki poore array me ek hi asay element ho ga jo jo bada ho gga tabhi to esko sorted and rotated bola jaata hai
         }
         
     }
