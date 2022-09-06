@@ -3,21 +3,19 @@ using namespace std;
 
 void  Move_0_to_left(int arr[],int n)
 {
-    int start=0;
-    int end=n-1;
-    while(start<=end)
+   for(int i=0;i<n-1;i++)
+   {
+    int min=i;
+    for(int j=i+1;j<n;j++)
     {
-        if(arr[start]<0)
+        if(arr[min]>arr[j])  // esme hamne selection sort use kr liya hai
+        
         {
-        start++;
-        }
-        else
-        {
-            swap(arr[end],arr[start]);
-            start++;
-            end--;
+            min=j;
         }
     }
+    swap(arr[i],arr[min]);
+   }
 }
 
  void print(int arr[],int n)
