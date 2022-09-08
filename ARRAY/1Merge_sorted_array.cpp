@@ -2,8 +2,7 @@
 #include <vector>
 using namespace std;
 
-
-void  merge_sorted_array(vector<int>arr,int n,vector<int>brr,int m)
+vector<int> merge_sorted_array(vector<int>arr,int n,vector<int>brr,int m)
 {
     vector<int>ans;
     int i=0;
@@ -17,7 +16,7 @@ void  merge_sorted_array(vector<int>arr,int n,vector<int>brr,int m)
         }
         else
         {
-            ans.push_back(brr[i]);
+            ans.push_back(brr[j]);
             j++;
         }
     }
@@ -29,7 +28,7 @@ void  merge_sorted_array(vector<int>arr,int n,vector<int>brr,int m)
     }
     while(j<m)
     {
-        ans.push_back(arr[i]);
+        ans.push_back(arr[j]);
         j++;
     }
 }
@@ -69,8 +68,8 @@ int main(){
         brr.push_back(n);
     }
 
-    merge_sorted_array(arr,m,brr,n);
-    print(arr);
+   int ans=merge_sorted_array(arr,m,brr,n);
+    print(ans);
     return 0;
 
 }
