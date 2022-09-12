@@ -3,9 +3,9 @@
 using namespace std;
 
 
-void  merge_sorted_array(vector<int>arr,int n,vector<int>brr,int m)
+void  merge_sorted_array(vector<int> arr,int n,vector<int> brr,int m)
 {
-    vector<int>ans;
+    vector<int> ans;
     int i=0;
     int j=0;
     while(i<n && j<m)
@@ -32,15 +32,21 @@ void  merge_sorted_array(vector<int>arr,int n,vector<int>brr,int m)
         ans.push_back(arr[i]);
         j++;
     }
+    for(int i=0;i<(int)ans.size();i++)
+    {
+    cout<<ans.at(i);
+    }
+    
 }
 
 void print(vector<int>arr)
 {
-    int n=arr.size();
+/*    int n=arr.size();
     for(int i=0;i<n;i++)
     {
         cout<<arr[i];
     }
+    */
 }
 
 
@@ -69,8 +75,8 @@ int main(){
         brr.push_back(n);
     }
 
-    merge_sorted_array(arr,m,brr,n);
-    print(arr);
+     merge_sorted_array(arr,m,brr,n);
+    
     return 0;
 
 }

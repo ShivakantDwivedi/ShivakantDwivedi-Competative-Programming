@@ -8,13 +8,14 @@ void sum(int arr[], int n)
     int size=ans.size();
     int sum=0;
     for(int i=0;i<n;i++)
+    {
         sum=sum+arr[i];
         ans.push_back(sum);
     }
    
-    for(int i=0;i<size;i++)
+    for(int i=0;i<(int)ans.size();i++)
     {
-        cout<<ans[i];
+       cout<<ans.at(i)<<endl;
     }
 }
 
