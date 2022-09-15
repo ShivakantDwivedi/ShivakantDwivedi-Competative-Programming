@@ -18,7 +18,7 @@ int power(int n,int p)
 }
 
 int main(){
-    int n,m,p;
+    int n,p;
     cout<<"Enter the no."<<endl;
     cin>>n;
     cout<<"Enter the power of the number"<<endl;
