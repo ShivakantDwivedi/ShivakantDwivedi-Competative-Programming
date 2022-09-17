@@ -27,23 +27,17 @@ rotate 1 steps to the right: [99,-1,-100,3]
 using namespace std;
 
 
-int  rotate_by_k_position(vector<int>ans,int position)
+void  rotate_by_k_position(vector<int> &ans,int position)
 {
-    vector<int>temp;
-    int m=temp.size();
-    for(int i=0;i<ans.size();i++)
+    vector<int>temp(ans.size());
+    int m=ans.size();
+    for(int i=0;i<m;i++)
     {
-        temp[(i+position)/m]=ans[i];
+        temp[(i+position)%m]=ans[i];
     }
         ans=temp;
 
-        for(int i=0;i<ans.size();i++)
-        {
-            cout<<ans.at[i];
-        }
 }
-
-
 
 
 
@@ -63,5 +57,9 @@ int main(){
     cout<<"Enter the position"<<endl;
     cin>>position;
     rotate_by_k_position(v,position);
+    for(int i=0;i<v.size();i++)
+    {
+        cout<<v[i]<<" ";
+    }
     return 0;
 }

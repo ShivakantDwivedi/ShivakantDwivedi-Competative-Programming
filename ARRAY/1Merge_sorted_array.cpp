@@ -2,45 +2,47 @@
 #include <vector>
 using namespace std;
 
-vector<int> merge_sorted_array(vector<int>arr,int n,vector<int>brr,int m)
-{
-    vector<int>ans;
+void merge_sorted_array(vector<int> &arr,int n,vector<int>&brr,int m,vector<int>&ans) // ans es liye kiye hai because function call ke time hame usme store karana hai value 
+{      //esme vector function ke andar vector ka address pass karte hai tabhi ham modification kr paaye ge
+    
     int i=0;
     int j=0;
+    int k=0;
     while(i<n && j<m)
     {
         if(arr[i]<brr[j])
         {
-            ans.push_back(arr[i]);
+            ans[k]=arr[i];
             i++;
+            k++;
         }
         else
         {
-            ans.push_back(brr[j]);
+            // ans.push_back(brr[j]);
+            ans[k]=brr[j];
             j++;
+
         }
     }
 
     while(i<n)
     {
-        ans.push_back(arr[i]);
+        // ans.push_back(arr[i]);
+        ans[k]=arr[i];
         i++;
+        k++;
     }
     while(j<m)
     {
-        ans.push_back(arr[j]);
+        // ans.push_back(brr[j]);
+        ans[k]=brr[j];
+
         j++;
+        k++;
     }
+   
 }
 
-void print(vector<int>arr)
-{
-    int n=arr.size();
-    for(int i=0;i<n;i++)
-    {
-        cout<<arr[i];
-    }
-}
 
 
 
@@ -67,9 +69,15 @@ int main(){
         cin>>n;
         brr.push_back(n);
     }
+    vector<int>v(size+size2);
+   merge_sorted_array(arr,m,brr,n,v);
 
-   int ans=merge_sorted_array(arr,m,brr,n);
-    print(ans);
+
+
+    for(int i=0;i<v.size();i++)
+    {
+        cout<<v[i]<<" ";
+    }
     return 0;
 
 }

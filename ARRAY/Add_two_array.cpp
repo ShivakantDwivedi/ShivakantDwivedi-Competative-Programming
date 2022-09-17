@@ -16,6 +16,7 @@ we have to add two array
 #include <vector>
 using namespace std;
 
+
 void add_two_array(int arr[100],int n, int m)
 {
     vector<int>ans;
@@ -63,14 +64,21 @@ void add_two_array(int arr[100],int n, int m)
         sum=sum%10; 
         ans.push_back(sum);
     }
+
     int start=0;
     int end=ans.size()-1;
-    while(start<end)
+    while(start<=end)
     {
         swap(arr[start],arr[end]);
         start++;
         end--;
-    }   
+    }
+
+    for(int i=0;i<ans.size();i++)
+    {
+        cout<<ans[i]<<" ";
+    }
+    
 }
 
 
