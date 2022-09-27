@@ -12,18 +12,18 @@ using namespace std;
 
 void wave_form(int arr[][3],int row,int col)
 {
-    for(int i=0; i<col ; i++)
+    for(int i=0; i<col ; i++) // ye coloumn ke liye hai
     {
         if(i%2==0) //  mtlabh ki even me top se bottom ki or jaana haii
         {
-            for(int j=0;j<row;j++)
+            for(int j=0;j<row;j++) // ye row ke liye hai
             {
                 cout<<arr[j][i];
             }
         }
         else //  mtlabh ki odd me bottom se top ki or jaana haii
-        {
-            for(int j=row-1;j>=0;j--)
+        { 
+            for(int j=row-1;j>=0;j--) // ye row ke liye hai
             {
                 cout<<arr[j][i];
             }

@@ -34,7 +34,7 @@ int main(){
     cin>>name;
     cout<<"Your name is "<<name<<endl;
     int length=get_length(name);
-    cout<<length;
+    cout<<"Length of the string is "<<length<<endl;
     reverse_string(name,length);
     cout<<"Your name is "<<name<<endl;
     return 0;
