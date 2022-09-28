@@ -4,7 +4,7 @@ using namespace std;
 void merge(int *arr, int start, int end )
 {
  
-    int mid=start+end/2;
+    int mid=(start+end)/2;
 
     int length1=mid-start+1;
 
@@ -18,14 +18,14 @@ void merge(int *arr, int start, int end )
 
    // ab array 1 ke andar element ko dalna hai
 
-   int k=0;
+   int k=start;  // yaha pe start se value se value start ho gi
    for(int i=0;i<length1;i++)
     {
         arr1[i]=arr[k++];
     }
 
     // ab array 2 ke andar element ko dalna hai
-    k=mid+1;
+    k=mid+1; // yaha pe mid + 1 se value aa rhi hao
     for(int j=0;j<length2;j++)
     {
         arr2[j]=arr[k++];
@@ -33,10 +33,10 @@ void merge(int *arr, int start, int end )
 
     int index1=0;
     int index2=0;
-    k=0;
+    k=start;
     while(index1<length1 && index2<length2)
     {
-        if(arr1[index1]<arr2[index2])
+        if(arr1[index1]<=arr2[index2])
         {
             arr[k++]=arr1[index1++];
         }
@@ -80,7 +80,7 @@ void merge_sort(int *arr, int start, int end )
     // partition of right part
     merge_sort(arr,mid+1,end);
 
-    merge(arr,0,end);
+    merge(arr,start,end);
 
 }
 
