@@ -63,5 +63,6 @@ int main(){
         arr.push_back(m);
     }
     subset(arr,n);
+    return 0;
     
     }
