@@ -1,40 +1,57 @@
-
 #include <iostream>
 using namespace std;
 
-void reverse_array(int *arr, int start,int size, int position)
+
+int  largest_sum(int arr[][2],int n,int m)
 {
-    int temp[100];
-    int m=0;
-    for(int i=position;i<size;i++)
+    int max=INT_FAST32_MIN;
+    int row=-1;
+    for(int i=0;i<n;i++)
     {
-        temp[m]=arr[i];
-        m++;
+        int sum=0;
+        for(int j=0;j<m;j++)
+        {
+            sum += arr[i][j];
+        }
+        cout<<"Sum of  an row is"<<sum<<endl;
+        if(sum>max)
+        {
+            max=sum;
+           row=i;
+        }
     }
-    for(int i=start;i<position;i++)
-    {
-        temp[m]=arr[i];
-        m++;
-    }
-    
-    for(int i=0;i<size;i++)
-    {
-        cout<<temp[i];
-     }
+    return row;
 }
 
 
-int main() {
-    int n;
-    cin>>n;
-    int arr[100];
-    for(int i=0;i<n;i++)
+
+
+int main(){
+
+    int arr[2][2];
+    cout<<"Enter the value in an array"<<endl;
+    for(int i=0;i<2;i++)
     {
-       cin>>arr[i];
+        for(int j=0;j<2;j++)
+        {
+            cin>>arr[i][j];
+        }
     }
-    int k;
-    cin>>k;
-    reverse_array(arr,0,n,k);
+
+    cout<<"Print the value of the 2D array"<<endl;
+     for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<2;j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    int ans=largest_sum(arr,2,2);
+    cout<<"Imdex of row is "<<ans;
     return 0;
+
+
 
 }

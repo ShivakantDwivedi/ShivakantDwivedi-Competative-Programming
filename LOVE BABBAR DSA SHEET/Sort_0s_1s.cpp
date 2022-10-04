@@ -1,6 +1,32 @@
-# <iostream>
+/*
+ample Input 1:
+2
+4
+1 0 1 0 
+6
+0 1 1 0 0 0
+Sample Output 1:
+0 0 1 1
+0 0 0 0 1 1
+Explanation For Sample Output 1:
+For the first test case, the sorted array will be [0 0 1 1].
+
+For the second test case, the sorted array will be [0 0 0 0 1 1].
+Sample Input 2:
+2
+10
+0 1 1 0 1 0 1 1 0 0
+8
+1 1 1 0 0 1 0 1
+Sample Output 2:
+0 0 0 0 0 1 1 1 1 1
+0 0 0 1 1 1 1 1
+*/
+
+
+#include  <iostream>
 using namespace std;
-void sincludeort0(int arr[],int n)
+void sort0(int arr[],int n)
 {
     int left=0;
     int right=n-1;

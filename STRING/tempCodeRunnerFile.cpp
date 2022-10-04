@@ -1,1 +1,1 @@
-I love coding
+ getline(cin,str);
