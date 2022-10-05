@@ -3,43 +3,57 @@
 using namespace std;
 
 
-void solve(vector<int>n , vector<vector<int>>&ans, int index )
+void solve(vector<int>&str , vector<vector<int>>&ans, int index )
 {
     // base condition
-    if(index>=n.size())
+    if(index>=str.size())
     {
-        ans.push_back(n);
+        ans.push_back(str); //  yaha pe nums pe jo value hai vo store ho rhi hai
         return;
     }
     else
     {
-        for(int i=index;i<n.size();i++)
+        for(int i=index;i<str.size();i++)
         {
-            swap(n[index],n[i]);
-            solve(n,ans,index+1);
+            swap(str[index],str[i]);
+            solve(str,ans,index+1);
             // backtracking
-            swap(n[index],n[i]);
+            swap(str[index],str[i]); // yaha pe main game chal rha hai jb backtracking karne ke badd
+                    // wapas aata hai solve function ke pass tb index +1 hota hai.
         }
     }
 }
-vector<vector<int>>permutation(vector<int>&n)
+void permutation(vector<int>&str)
 {
     vector<vector<int>>ans;
     int index=0;
-    solve(n,ans,index);
-    return ans;
+    solve(str,ans,index);
+
+    for(int i=0;i<ans.size();i++)
+    {
+        cout<<ans[i];
+    }
+    
 }
 
 
+
+
 int main(){
-    cout<<"Enter the number"<<endl;
-    vector<int>n;
+  
+    vector<int>str;
     int m;
-    for(int i=0;i<n.size();i++)
+    cout<<"Enter the size of the number"<<endl;
+    int n;
+    cin>>n;
+      cout<<"Enter the number"<<endl;
+    for(int i=0;i<n;i++)
     {
         cin>>m;
-        n.push_back(m);
+        str.push_back(m);
     }
-    permutation(n);
+    permutation(str);
+
+  
     return 0;
 }
