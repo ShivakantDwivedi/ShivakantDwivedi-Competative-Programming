@@ -49,7 +49,7 @@ bool isSafe(int x, int y ,int n, vector<vector<int>> visited, vector<vector<int>
 void solve(vector<vector<int >>&m, vector<string>&ans , int n, int x, int y,  vector<vector<int>> visited, string path)
 {
     // base condition 
-    if(x==n-1 && y==n-1)
+    if(x==n-1 && y==n-1) // eskka matlabh ham last position pe pahucch gye hai
     {
         ans.push_back(path);
         return ;
@@ -113,8 +113,8 @@ vector<string>find_path(vector<vector<int >>&m, int n)
 
     if(m[0][0]!=0)
     {
-        return ans;
-    }
+        return ans; // agr m[0][0] ho to aage hm nhi badh paaye ge
+     }
     int srcx=0;
     int srcy=0;
 
