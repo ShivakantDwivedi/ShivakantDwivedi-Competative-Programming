@@ -6,6 +6,7 @@ int main(){
     cout<<&p<<endl;
     cout<<p<<endl;
     cout<<&i<<endl;
+    cout<<*p<<endl;
     p=p+1;
     cout<<"After  Updation "<<p<<endl;
 }
