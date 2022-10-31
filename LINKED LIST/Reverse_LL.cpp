@@ -24,6 +24,29 @@ void insert_at_head(Node* &head,int d)
 
 }
 
+Node * reverse(Node *head, Node *current,Node *prev)
+{
+    if(head==NULL || head->next==NULL)
+    return head;
+
+   // Node *current=head;
+   // Node *prev=NULL;
+    Node *forward=NULL;
+
+    while(current!=NULL)
+    {
+        forward=current->next;
+        current->next=prev;
+        prev=current;
+        current=forward;
+    }
+
+    return prev;
+
+
+    
+}
+
 void print(Node* &head) // ye functiom banaya hai print name ka jiske andar head node ki value pass ho rhi hai
 {
     Node *temp=head; // head vali value ko copy kr rha hai temp me
@@ -43,13 +66,15 @@ int main() {
     Node* head=node1; // jo node banaya hu uski value head point kr rha hai
 
     print(head);
-    insert_at_head(head,12);
+   insert_at_head(head,12);
     print(head);
 
-    insert_at_head(head,15);
+  insert_at_head(head,15);
     print (head);
 
-
+   Node * revHead=reverse(head,head,NULL);
+    print(revHead);
+    
     return 0;
 
 }
