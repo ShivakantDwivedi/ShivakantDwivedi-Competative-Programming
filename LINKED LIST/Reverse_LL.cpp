@@ -72,9 +72,9 @@ int main() {
   insert_at_head(head,15);
     print (head);
 
-   Node * revHead=reverse(head,head,NULL);
+   Node * revHead=reverse(head,head,NULL); // yaha pe store karna bhi bahut jaarori haai
     print(revHead);
-    
+
     return 0;
 
 }
