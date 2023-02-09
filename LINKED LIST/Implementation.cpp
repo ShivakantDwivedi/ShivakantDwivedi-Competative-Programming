@@ -23,7 +23,7 @@ class Node{
 int main(){
 
     Node *node =new Node(10);
-    cout<<node -> data <<endl;
+    cout<<node -> data <<endl; // ye adress ki value print kara raha hai kyoki vo pointer hai
     cout<<node -> next <<endl;
 
     return 0;
