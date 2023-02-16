@@ -24,7 +24,7 @@ void insert_at_head(Node* &head,int d)
 
 }
 
-Node * reverse(Node *head, Node *current,Node *prev)
+Node* reverse(Node *head, Node *current,Node *prev)
 {
     if(head==NULL || head->next==NULL)
     return head;
@@ -43,8 +43,6 @@ Node * reverse(Node *head, Node *current,Node *prev)
 
     return prev;
 
-
-    
 }
 
 void print(Node* &head) // ye functiom banaya hai print name ka jiske andar head node ki value pass ho rhi hai
