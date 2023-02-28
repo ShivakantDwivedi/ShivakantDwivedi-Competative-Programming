@@ -77,3 +77,29 @@ public:
 
 // Approch 2
 
+class Solution {
+public:
+    int longestPalindrome(string s) {
+        unordered_map<char,int>ans;
+        for(auto ch : s)
+        {
+            ans[ch]++;
+        }
+        int res=0;
+        bool odd_res=false;
+        for(auto &c :ans)
+        {
+            if(c.second % 2==0)
+            {
+                res=res+c.second;
+            }
+            else
+            {
+                odd_res=true;
+                res=res+c.second-1;
+            }
+        }
+        if(odd_res) res++;
+        return res;
+    }
+};
