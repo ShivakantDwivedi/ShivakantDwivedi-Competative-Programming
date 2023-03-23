@@ -44,10 +44,8 @@ Similar Questions
 Related Topics
 Copyright ©️ 2023 LeetCode All rights reserved
 
-
-
-
 */
+
 
 APPRROCH 1
 
@@ -71,9 +69,4 @@ public:
         return maxi;
     }
 };
-
-
-
-
-
 
