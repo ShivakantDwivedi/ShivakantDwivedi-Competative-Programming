@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/shiva/Desktop/PLACEMENT CODE/LEETCODE QUESTION",
-      "program": "c:/Users/shiva/Desktop/PLACEMENT CODE/LEETCODE QUESTION/build/Debug/outDebug",
+      "cwd": "c:/BTECH WORK/DSA  COURSE/PLACEMENT CODE/LOVE BABBAR LEETCODE QUESTION",
+      "program": "c:/BTECH WORK/DSA  COURSE/PLACEMENT CODE/LOVE BABBAR LEETCODE QUESTION/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
