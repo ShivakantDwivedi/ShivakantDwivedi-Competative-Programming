@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/shiva/Desktop/PLACEMENT CODE/CODECHEF CONTEST",
-      "program": "c:/Users/shiva/Desktop/PLACEMENT CODE/CODECHEF CONTEST/build/Debug/outDebug",
+      "cwd": "c:/BTECH WORK/DSA  COURSE/PLACEMENT CODE/CODECHEF CONTEST",
+      "program": "c:/BTECH WORK/DSA  COURSE/PLACEMENT CODE/CODECHEF CONTEST/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
