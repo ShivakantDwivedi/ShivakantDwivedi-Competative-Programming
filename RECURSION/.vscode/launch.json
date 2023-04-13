@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/shiva/Desktop/PLACEMENT CODE/RECURSION",
-      "program": "c:/Users/shiva/Desktop/PLACEMENT CODE/RECURSION/build/Debug/outDebug",
+      "cwd": "c:/BTECH WORK/DSA  COURSE/PLACEMENT CODE/RECURSION",
+      "program": "c:/BTECH WORK/DSA  COURSE/PLACEMENT CODE/RECURSION/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
